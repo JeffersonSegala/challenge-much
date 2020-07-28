@@ -1,7 +1,7 @@
 const axios = require('axios');
 require('dotenv/config');
 
-const giphyBaseURL = 'http://api.giphy.com/v1/gifs/random?api_key=OWNG1PhyApiKey&tag=';
+const giphyBaseURL = `http://api.giphy.com/v1/gifs/random?api_key=${process.env.GIPHY_API_KEY}&tag=`;
 
 const findGifUrl = async (term) => {
   return axios.get(giphyBaseURL + term)
