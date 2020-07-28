@@ -1,4 +1,12 @@
 const recipePuppyService = require('../services/recipePuppyService');
+const giphyService = require('../services/giphyService');
+
+const updateRecipesGifs = async (recipes) => {
+  return await Promise.all(recipes.map(async recipe => {
+    recipe.gif = await giphyService.findGifUrl(recipe.title);
+    return recipe;
+  }));
+};
 
 /**
  * from: [{ title, ingredients, href, thumbnail }]
@@ -18,6 +26,7 @@ const getRicpes = async (ingridients) => {
 
   let recipes = await recipePuppyService.findRecipes(keywords);
   recipes = formatRecipes(recipes);
+  recipes = await updateRecipesGifs(recipes);
 
   return { keywords, recipes };
 };
