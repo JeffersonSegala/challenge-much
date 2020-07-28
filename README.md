@@ -17,3 +17,39 @@
 
 ### Rodar os testes
 * npm run test
+
+### Examplo de requisição
+```
+Request: http://localhost/recipes/?i=onion,tomato,cheese,meat
+Response: {
+    "keywords": [
+        "onion",
+        "tomato",
+        "cheese"
+    ],
+    "recipes": [
+        {
+            "title": "Easy Mexican Casserole Recipe",
+            "ingredients": [
+                "cheese",
+                "cottage cheese",
+                "ground beef",
+                "tomato",
+                "tortilla chips"
+            ],
+            "link": "http://www.grouprecipes.com/36010/easy-mexican-casserole.html",
+            "gif": "https://media2.giphy.com/media/4wZkVNGkFbaWk/giphy.gif"
+        },
+        {
+            "title": "Speedy Egg & Cheese Stack \r\n\r\n",
+            "ingredients": [
+                "cheese",
+                "eggs",
+                "flour tortillas",
+                "tomato"
+            ],
+            "link": "http://www.kraftfoods.com/kf/recipes/speedy-egg-cheese-stack-91423.aspx",
+            "gif": "https://media1.giphy.com/media/gL9ZUhyF2lKMZSEoAv/giphy.gif"
+        },
+        {...
+```
