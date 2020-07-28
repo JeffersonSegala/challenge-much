@@ -1,5 +1,8 @@
 # Challenge-Much
 
+### Variáveis de ambiente
+* Criar arquivo `.env` na raiz do projeto de acordo com o exemplo `.env.example`
+
 ### Rodar a aplicação
 #### Apenas com npm
 * `npm install` (instalar as dependências)
@@ -11,3 +14,6 @@
 * *Caminhos considerando o diretório atual como raiz do projeto
 * *Caso o sistema operacional não seja UNIX `$(pwd)` pode ser substituido pelo caminho completo até a raiz do projeto, exemplo: 
 `docker run -it -p 80:80 -v C:\Projetos\challenge-much:/app challenge-much-api`
+
+### Rodar os testes
+* npm run test
