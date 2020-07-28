@@ -1,7 +1,9 @@
 const express = require('express');
 const app = express();
 
-app.get('/', (req, res) => res.send('Challenge-Much'));
+const recipesRoute = require('./routes/recipes');
+
+app.use('/recipes', recipesRoute);
 
 app.listen(80, () => {
   console.log('Running on port 80');
